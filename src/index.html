@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    
+    <h1>AXIOS TESTE</h1>
+
+    <h2>Response</h2>
+    <pre>
+    <code></code>
+    </pre>
+
+    <script>    
+        axios.post('https://85k7bv04na.execute-api.us-east-1.amazonaws.com/dev/register',
+            {
+                name: 'leo',
+                email: 'axios@com.cc'
+            },
+            {
+                headers: {
+                    Authorization: 'leonardo.ruza@t2software.com.br'
+                }
+            }
+        )
+        .then(data => document.querySelector('code').innerHTML = JSON.stringify(data))
+        .catch(error => document.querySelector('code').innerHTML = JSON.stringify(error))
+    </script>
+
+</body>
+</html>
